@@ -1,0 +1,6 @@
+ODOO_HOST = 'localhost'
+ODOO_PORT = '8069'
+ODOO_DB_NAME = 'postgres'
+ODOO_LOGIN = 'admin'
+ODOO_PASSWORD = 'admin'
+TELEGRAM_TOKEN = '7163634134:AAHGwXCdfRgvplwEVeFOFVF4lekHrUelJB0'
