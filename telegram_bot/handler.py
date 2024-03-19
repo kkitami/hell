@@ -12,8 +12,12 @@ router=Router()
 
 @router.message(Command("start"))
 async def cmd_start(message: Message):
-    await message.answer("Привет!  Я бот, который будет уведомлять о назначении исполнителя на лид Odoo и ")
+    await message.answer("Привет!  Я бот, который будет уведомлять о назначении исполнителя на лид Odoo")
 
+@router.message(Command("get_id"))
+async def get_my_id(message: Message):
+    user_id = message.from_user.id
+    await message.answer(f"Ваш Telegram ID: {user_id}")
 @router.callback_query(F.data == 'send_message')
 async def handle_send_message(callback_query: CallbackQuery, state: FSMContext):
     message = callback_query.message
